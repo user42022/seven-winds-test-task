@@ -1,19 +1,16 @@
-body {
-    margin: 0;
-    height: 100vh;
-    width: 100vw;
+@use '@styles/variables' as variables;
 
-    > #root {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: inherit;
-        width: inherit;
+:root {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+}
 
-        > iframe {
-            height: 100%;
-            width: 100%;
-            border: unset;
-        }
-    }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background-color: variables.$background-primary;
+  color: variables.$color-primary;
 }

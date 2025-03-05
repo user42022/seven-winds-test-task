@@ -28,7 +28,12 @@ module.exports = () => {
         resolve: {
             extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss', '.sass'],
             fallback: { process: false },
-            modules: [__dirname, 'node_modules']
+            modules: [__dirname, 'node_modules'],
+            alias: {
+                '@styles': path.resolve(__dirname, 'src/assets/styles'),
+                '@icons': path.resolve(__dirname, 'src/assets/icons'),
+                '@components': path.resolve(__dirname, 'src/components'),
+              },
         },
         devServer: {
             hot: true,
