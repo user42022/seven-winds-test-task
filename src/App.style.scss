@@ -10,7 +10,13 @@
   padding: 0;
 }
 
-#root {
-  background-color: variables.$background-primary;
+:global(#root) {
+  background-color: variables.$border-color;
   color: variables.$color-primary;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: fit-content;
+  row-gap: 1px;
 }

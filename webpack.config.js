@@ -50,7 +50,18 @@ module.exports = () => {
                 },
                 {
                     test: /\.s?[ca]ss$/i,
-                    use: ['style-loader', 'css-loader', 'sass-loader']
+                    use: [
+                        'style-loader',
+                        {
+                            loader: 'css-loader',
+                            options: {
+                               modules: {
+                                exportLocalsConvention: "camelCaseOnly",
+                               }
+                            },
+                        },
+                        'sass-loader'
+                    ]
                 },
                 {
                     test: /\.(png|jpe?g|gif|webp|ico)$/i,

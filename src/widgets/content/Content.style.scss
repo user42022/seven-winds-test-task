@@ -1,0 +1,12 @@
+@use '@styles/variables' as variables;
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  column-gap: 1px;
+}
+
+.workspace {
+  flex-grow: 1;
+  background-color: variables.$background-primary;
+}
