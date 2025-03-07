@@ -7,6 +7,7 @@ import styles from './TableRow.style.scss'
 import { applyStyles, useAppDispatch } from 'src/shared'
 import { actions } from 'src/entities/works'
 import { createWork, removeWork, updateWork } from "src/entities/works/operations"
+import { NumericFormat } from 'react-number-format'
 
 const interactingWorkProps: (keyof RowResponse)[] = [
   'rowName',
@@ -25,12 +26,11 @@ type Props = {
   }
 }
 
-
 export function TableRow({ work, refCallback, bound }: Props) {
   const [state, setState] = useState({ ...work, isRaw: work._addInfo.isNew ?? false })
   const [controlsVisible, setControlsVisible] = useState(false)
   const dispatch = useAppDispatch()
-
+  const [textType, ...numberType] = interactingWorkProps
   const createRequest: OutlayRowUpdateRequest = {
     equipmentCosts: state.equipmentCosts,
     estimatedProfit: state.estimatedProfit,
@@ -85,16 +85,24 @@ export function TableRow({ work, refCallback, bound }: Props) {
     <tr className={styles.tableRow} key={work.id} onDoubleClick={() => setState((prev) => ({ ...prev, isRaw: true }))}>
       <td className={styles.tableCell} style={{ paddingLeft: `${1.6 + work._addInfo.depth * 2}rem` }}>
         <div className={applyStyles([styles.controls, controlsVisible ? styles.controlsVisible : ''])} onMouseLeave={mouseLeaveHandler}>
-        <DocumentIcon ref={refCallback} onClick={handleCreateClick} onMouseEnter={mouseEnterHandler}/>
-        {controlsVisible && <DeleteIcon onClick={handleRemoveWork} />}
+          <DocumentIcon ref={refCallback} onClick={handleCreateClick} onMouseEnter={mouseEnterHandler} />
+          {controlsVisible && <DeleteIcon onClick={handleRemoveWork} />}
         </div>
         {bound && <div
           className={styles.bound}
           style={{ ...bound, transform: `translate3d(${-bound.width + 6}px,${-bound.height - 14}px, 0)` }}
         />}
       </td>
-      {interactingWorkProps.map((workProp) => (
-        <td key={workProp} className={styles.tableCell}>{state.isRaw ? <input
+        <td className={styles.tableCell}>{state.isRaw ? <input
+          onChange={createChangeHandler(textType)}
+          onKeyDown={handleSubmit}
+          value={state[textType]}
+          className={styles.input}
+        /> : work[textType]}</td>
+      {numberType.map((workProp) => (
+        <td key={workProp} className={styles.tableCell}>{state.isRaw ? <NumericFormat
+          decimalScale={0}
+          allowNegative
           onChange={createChangeHandler(workProp)}
           onKeyDown={handleSubmit}
           value={state[workProp]}
