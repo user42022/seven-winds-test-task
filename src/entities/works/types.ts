@@ -43,6 +43,7 @@ export type RowResponse = {
 type AddInfo = {
   depth: number
   parent: null | string
+  isNew?: true
 }
 
 export type RowResponseWithAddInfo = RowResponse & {_addInfo: AddInfo}
