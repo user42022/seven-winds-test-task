@@ -6,7 +6,7 @@ export type OutlayRowRequest = {
   materials: number
   mimExploitation: number
   overheads: number
-  parentId: string
+  parentId: string | null
   rowName: string
   salary: number
   supportCosts: number

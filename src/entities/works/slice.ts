@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { pullWorks } from "./operations"
+import { createWork, pullWorks, updateWork } from "./operations"
 import { RowResponse, RowResponseWithAddInfo, } from "./types"
 
 type State = {
@@ -31,7 +31,7 @@ export const slice = createSlice({
   initialState,
   reducers: {
     createNewWork: (state, action: PayloadAction<{ parentId: string }>) => {
-      const {worksMap, worksOrder} = state
+      const { worksMap, worksOrder } = state
       const id = `new-${Date.now()}`
       const parentId = action.payload.parentId
       const parentDepth = worksMap[parentId]._addInfo.depth
@@ -65,8 +65,34 @@ export const slice = createSlice({
       for (const id in worksMap) {
         state.worksMap[id] = { ...worksMap[id] }
       }
+
       state.worksOrder = worksOrder
     })
+      .addCase(createWork.fulfilled, (state, { payload }) => {
+        const { id: previousId, ...data } = payload
+        const { worksMap, worksOrder } = state
+
+        worksMap[data.current.id] = { ...data.current, _addInfo: { ...worksMap[previousId]._addInfo } }
+        delete worksMap[data.current.id]._addInfo.isNew
+        delete worksMap[previousId]
+
+        const indexofPreviousId = worksOrder.findIndex((id) => id === previousId)
+        worksOrder.splice(indexofPreviousId, 1, data.current.id)
+
+        data.changed.forEach((changedWork) => {
+          worksMap[changedWork.id] = { ...worksMap[changedWork.id], ...changedWork }
+        })
+      })
+      .addCase(updateWork.fulfilled, (state, { payload }) => {
+        const { current, changed } = payload
+        const { worksMap } = state
+
+        worksMap[current.id] = { ...worksMap[current.id], ...current }
+
+        changed.forEach((changedWork) => {
+          worksMap[changedWork.id] = { ...worksMap[changedWork.id], ...changedWork }
+        })
+      })
   },
 })
 
