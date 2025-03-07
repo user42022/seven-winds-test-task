@@ -1,0 +1,37 @@
+@use '@styles/variables' as variables;
+
+.table-row {
+    position: relative;
+    border-bottom: 1px solid variables.$border-color;
+
+    &:last-of-type {
+        border-bottom: none;
+    }
+}
+
+.table-cell {
+    padding-left: 1.2rem;
+    height: 6rem;
+
+    &:first-of-type {
+        padding-left: 1.6rem;
+    }
+}
+
+.input {
+    border: 1px solid variables.$border-color;
+    border-radius: 6px;
+    outline: none;
+    background-color: transparent;
+    color: variables.$color-secondary;
+    padding: 1rem;
+    width: 100%;
+}
+
+.bound {
+    position: absolute;
+    width: 1.2rem;
+    height: 6rem;
+    border-bottom: 1px solid grey;
+    border-left: 1px solid grey;
+}

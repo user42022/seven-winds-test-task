@@ -1,3 +1,3 @@
 export function applyStyles(styles: string[]) {
-    return styles.join(' ')
+  return styles.join(' ')
 }

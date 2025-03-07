@@ -3,6 +3,7 @@
 .navbar {
   width: 23.4rem;
   background-color: variables.$background-secondary;
+  flex-shrink: 0;
 }
 
 .nav-item {
