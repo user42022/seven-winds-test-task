@@ -9,39 +9,48 @@ export const getWorksRequest = async (): Promise<TreeResponse[]> => {
   }
 
   return await res.json()
-
 }
 
 export const createWorkRequest = async (body: OutlayRowRequest): Promise<RecalculatedRows> => {
   const res = await fetch(`${api.BASE_URL}/${api.ENDPOINTS.row}/create`, {
-    method:'POST',
+    method: 'POST',
     body: JSON.stringify(body),
-    headers:{
+    headers: {
       'Content-Type': 'application/json'
     }
   })
 
-  if (res.status !== 200) {
+  if (res.status !== 200 && res.status !== 201) {
     throw new Error('Ошибка запроса')
   }
 
   return await res.json()
-
 }
 
-export const updateWorkRequest = async ({body,id}: {body:OutlayRowUpdateRequest, id: string}): Promise<RecalculatedRows> => {
+export const updateWorkRequest = async ({ body, id }: { body: OutlayRowUpdateRequest, id: string }): Promise<RecalculatedRows> => {
   const res = await fetch(`${api.BASE_URL}/${api.ENDPOINTS.row}/${id}/update`, {
-    method:'POST',
+    method: 'POST',
     body: JSON.stringify(body),
-    headers:{
+    headers: {
       'Content-Type': 'application/json'
     }
   })
 
-  if (res.status !== 200) {
+  if (res.status !== 200 && res.status !== 201) {
     throw new Error('Ошибка запроса')
   }
 
   return await res.json()
+}
 
+export const removeWorkRequest = async (id: string): Promise<RecalculatedRows> => {
+  const res = await fetch(`${api.BASE_URL}/${api.ENDPOINTS.row}/${id}/delete`, {
+    method: 'DELETE',
+  })
+
+  if (res.status !== 200 && res.status !== 201) {
+    throw new Error('Ошибка запроса')
+  }
+
+  return await res.json()
 }

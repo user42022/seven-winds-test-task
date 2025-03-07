@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { createWork, pullWorks, updateWork } from "./operations"
+import { createWork, pullWorks, removeWork, updateWork } from "./operations"
 import { RowResponse, RowResponseWithAddInfo, } from "./types"
 
 type State = {
@@ -30,11 +30,11 @@ export const slice = createSlice({
   name: 'entities/works',
   initialState,
   reducers: {
-    createNewWork: (state, action: PayloadAction<{ parentId: string }>) => {
+    createNewWork: (state, action: PayloadAction<{ parentId: string | null }>) => {
       const { worksMap, worksOrder } = state
       const id = `new-${Date.now()}`
       const parentId = action.payload.parentId
-      const parentDepth = worksMap[parentId]._addInfo.depth
+      const parentDepth = parentId === null ? 0 : worksMap[parentId]._addInfo.depth
 
       worksMap[id] = {
         ...newWork, id, _addInfo: {
@@ -61,6 +61,20 @@ export const slice = createSlice({
   extraReducers: builder => {
     builder.addCase(pullWorks.fulfilled, (state, { payload }) => {
       const [worksMap, worksOrder] = payload
+
+      if (!worksOrder.length) {
+        const id = `new-${Date.now()}`
+
+        worksMap[id] = {
+          ...newWork, id, _addInfo: {
+            depth: 0,
+            parent: null,
+            isNew: true
+          }
+        }
+
+        worksOrder.push(id)
+      }
 
       for (const id in worksMap) {
         state.worksMap[id] = { ...worksMap[id] }
@@ -92,6 +106,44 @@ export const slice = createSlice({
         changed.forEach((changedWork) => {
           worksMap[changedWork.id] = { ...worksMap[changedWork.id], ...changedWork }
         })
+      })
+      .addCase(removeWork.fulfilled, (state, { payload }) => {
+        const { id, changed } = payload
+        const { worksMap, worksOrder } = state
+        const depthOfRootWork = worksMap[id]._addInfo.depth
+
+        const startToRemoveFromOrder = worksOrder.findIndex((workId) => workId === id)
+        const worksAfterRootWork = worksOrder.slice(startToRemoveFromOrder + 1)
+        const finishToRemoveFromOrder = worksAfterRootWork
+          .findIndex((workId) => worksMap[workId]._addInfo.depth <= depthOfRootWork)
+
+        const childWorks = finishToRemoveFromOrder === -1 ?
+          worksAfterRootWork :
+          worksAfterRootWork.slice(0, finishToRemoveFromOrder + 1)
+
+        const worksToRemove = [id, ...childWorks]
+        worksToRemove.forEach((workId) => {
+          delete worksMap[workId]
+        })
+        worksOrder.splice(startToRemoveFromOrder, worksToRemove.length)
+
+        changed.forEach((changedWork) => {
+          worksMap[changedWork.id] = { ...worksMap[changedWork.id], ...changedWork }
+        })
+
+        if (!worksOrder.length) {
+          const id = `new-${Date.now()}`
+
+          worksMap[id] = {
+            ...newWork, id, _addInfo: {
+              depth: 0,
+              parent: null,
+              isNew: true
+            }
+          }
+
+          worksOrder.push(id)
+        }
       })
   },
 })

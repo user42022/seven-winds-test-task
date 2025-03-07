@@ -1,37 +1,55 @@
 @use '@styles/variables' as variables;
 
 .table-row {
-    position: relative;
-    border-bottom: 1px solid variables.$border-color;
+  position: relative;
+  border-bottom: 1px solid variables.$border-color;
 
-    &:last-of-type {
-        border-bottom: none;
-    }
+  &:last-of-type {
+    border-bottom: none;
+  }
 }
 
 .table-cell {
-    padding-left: 1.2rem;
-    height: 6rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  height: 6rem;
 
-    &:first-of-type {
-        padding-left: 1.6rem;
-    }
+  &:first-of-type {
+    padding-left: 1.6rem;
+  }
 }
 
 .input {
-    border: 1px solid variables.$border-color;
-    border-radius: 6px;
-    outline: none;
-    background-color: transparent;
-    color: variables.$color-secondary;
-    padding: 1rem;
-    width: 100%;
+  border: 1px solid variables.$border-color;
+  border-radius: 6px;
+  outline: none;
+  background-color: transparent;
+  color: variables.$color-secondary;
+  padding: 1rem;
+  width: 100%;
 }
 
 .bound {
-    position: absolute;
-    width: 1.2rem;
-    height: 6rem;
-    border-bottom: 1px solid grey;
-    border-left: 1px solid grey;
+  position: absolute;
+  width: 1.2rem;
+  height: 6rem;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+}
+
+.controls {
+  padding: 6px;
+  border-radius: 6px;
+  background-color: transparent;
+  width: 5.4rem;
+  display: flex;
+  column-gap: 1rem;
+
+  &-visible {
+    background-color: variables.$border-color;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
