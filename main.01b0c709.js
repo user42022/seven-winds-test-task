@@ -410,7 +410,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.mlKkClWsm6KB2GCjMMZX {
   display: flex;
   align-items: center;
   justify-content: center;
-}`, "",{"version":3,"sources":["webpack://./src/widgets/header/Header.style.scss","webpack://./src/assets/styles/_variables.scss"],"names":[],"mappings":"AAEA;EACE,cAAA;EACA,aAAA;EACA,0CAAA;EACA,2BAAA;EACA,oBAAA;EACA,YAAA;EACA,yBAAA;EACA,yDACE;AAFJ;AAKI;EACE,yBCfe;ADYrB;AAMI;EACE,WAAA;EACA,yBCpBe;ADgBrB;;AAQA;EACE,kBAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;AALF;;AAQA;EACE,mBAAA;EACA,oCAAA;EACA,aAAA;EACA,mBAAA;AALF;AAOE;EACE,qBCrCY;ADgChB;;AASA;EACE,wBAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA;AANF;;AASA;EACE,cChDgB;AD0ClB;AAQE;EACE,eAAA;AANJ;;AAUA;EACE,iBAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;AAPF","sourcesContent":["@use '@styles/variables' as variables;\r\n\r\n.header {\r\n  height: 8.8rem;\r\n  display: grid;\r\n  grid-template-columns: 23.4rem 31.2rem 1fr;\r\n  grid-template-rows: 1fr 1fr;\r\n  grid-auto-rows: auto;\r\n  gap: 1px 1px;\r\n  grid-auto-flow: row dense;\r\n  grid-template-areas:\r\n    \"controls controls controls\"\r\n    \". . .\";\r\n\r\n    &>* {\r\n      background-color: variables.$background-primary;\r\n    }\r\n\r\n    &::after {\r\n      content: '';\r\n      background-color: variables.$background-primary;\r\n    }\r\n}\r\n\r\n.controls {\r\n  padding-left: 2rem;\r\n  grid-area: controls;\r\n  display: flex;\r\n  align-items: center;\r\n  column-gap: 3rem;\r\n}\r\n\r\n.mode {\r\n  align-self: stretch;\r\n  border-bottom: 2px solid transparent;\r\n  display: flex;\r\n  align-items: center;\r\n\r\n  &-selected {\r\n    border-color: variables.$color-primary;\r\n  }\r\n}\r\n\r\n.dropdown {\r\n  padding: 0 1.3rem 0 2rem;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n\r\n.project {\r\n  color: variables.$color-secondary;\r\n\r\n  &-abbreviation {\r\n    font-size: 1rem;\r\n  }\r\n}\r\n\r\n.title {\r\n  font-size: 1.8rem;\r\n  font-weight: normal;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n","$background-primary: #202124;\r\n$background-secondary: #27272A;\r\n$color-primary: #FFFFFF;\r\n$color-secondary: #A1A1AA;\r\n$border-color: #414144;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/widgets/header/Header.style.scss","webpack://./src/assets/styles/_variables.scss"],"names":[],"mappings":"AAEA;EACE,cAAA;EACA,aAAA;EACA,0CAAA;EACA,2BAAA;EACA,oBAAA;EACA,YAAA;EACA,yBAAA;EACA,yDACE;AAFJ;AAKI;EACE,yBCfe;ADYrB;AAMI;EACE,WAAA;EACA,yBCpBe;ADgBrB;;AAQA;EACE,kBAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;EACA,gBAAA;AALF;;AAQA;EACE,mBAAA;EACA,oCAAA;EACA,aAAA;EACA,mBAAA;AALF;AAOE;EACE,qBCrCY;ADgChB;;AASA;EACE,wBAAA;EACA,aAAA;EACA,mBAAA;EACA,8BAAA;AANF;;AASA;EACE,cChDgB;AD0ClB;AAQE;EACE,eAAA;AANJ;;AAUA;EACE,iBAAA;EACA,mBAAA;EACA,aAAA;EACA,mBAAA;EACA,uBAAA;AAPF","sourcesContent":["@use '@styles/variables' as variables;\r\n\r\n.header {\r\n  height: 8.8rem;\r\n  display: grid;\r\n  grid-template-columns: 23.4rem 31.2rem 1fr;\r\n  grid-template-rows: 1fr 1fr;\r\n  grid-auto-rows: auto;\r\n  gap: 1px 1px;\r\n  grid-auto-flow: row dense;\r\n  grid-template-areas:\r\n    'controls controls controls'\r\n    '. . .';\r\n\r\n    &>* {\r\n      background-color: variables.$background-primary;\r\n    }\r\n\r\n    &::after {\r\n      content: '';\r\n      background-color: variables.$background-primary;\r\n    }\r\n}\r\n\r\n.controls {\r\n  padding-left: 2rem;\r\n  grid-area: controls;\r\n  display: flex;\r\n  align-items: center;\r\n  column-gap: 3rem;\r\n}\r\n\r\n.mode {\r\n  align-self: stretch;\r\n  border-bottom: 2px solid transparent;\r\n  display: flex;\r\n  align-items: center;\r\n\r\n  &-selected {\r\n    border-color: variables.$color-primary;\r\n  }\r\n}\r\n\r\n.dropdown {\r\n  padding: 0 1.3rem 0 2rem;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n\r\n.project {\r\n  color: variables.$color-secondary;\r\n\r\n  &-abbreviation {\r\n    font-size: 1rem;\r\n  }\r\n}\r\n\r\n.title {\r\n  font-size: 1.8rem;\r\n  font-weight: normal;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n}\r\n\r\n","$background-primary: #202124;\r\n$background-secondary: #27272A;\r\n$color-primary: #FFFFFF;\r\n$color-secondary: #A1A1AA;\r\n$border-color: #414144;"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"header": `mlKkClWsm6KB2GCjMMZX`,
@@ -477,7 +477,7 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.wrWHPpEF7Pu50LMTXGJ2 {
 }
 .PIaRgUEyPnfiJdtEuhTB:first-of-type {
   padding: 2.2rem 1.6rem;
-}`, "",{"version":3,"sources":["webpack://./src/widgets/table/Table.style.scss","webpack://./src/assets/styles/_variables.scss"],"names":[],"mappings":"AAEA;EACE,iBAAA;EACA,oBAAA;EACA,yBAAA;EACA,mBAAA;AADF;;AAIA;EACE,sBAAA;EACA,mBAAA;EACA,cCTgB;EDUhB,eAAA;EAEA,gBAAA;AAFF;AAIE;EAIE,gBAAA;AALJ;AAQE;EACE,WAAA;AANJ;;AAWA;EACE,kBAAA;EACA,gCAAA;AARF;;AAWA;EACE,sBAAA;AARF;AAUE;EACE,sBAAA;AARJ","sourcesContent":["@use '@styles/variables' as variables;\r\n\r\n.table {\r\n  margin-left: 1rem;\r\n  margin-right: .9rem;\r\n  border-collapse: collapse;\r\n  table-layout: fixed;\r\n}\r\n\r\n.table-header {\r\n  box-sizing: border-box;\r\n  font-weight: normal;\r\n  color: variables.$color-secondary;\r\n  padding: 1.2rem;\r\n\r\n  text-align: left;\r\n\r\n  &:nth-of-type(3),\r\n  &:nth-of-type(4),\r\n  &:nth-of-type(5),\r\n  &:nth-of-type(6) {\r\n    min-width: 20rem;\r\n  }\r\n\r\n  &:nth-of-type(2) {\r\n    width: 100%;\r\n  }\r\n}\r\n\r\n\r\n.table-row {\r\n  position: relative;\r\n  border-bottom: 1px solid variables.$border-color;\r\n}\r\n\r\n.table-cell {\r\n  padding: 2.1rem 1.2rem;\r\n\r\n  &:first-of-type {\r\n    padding: 2.2rem 1.6rem;\r\n  }\r\n}","$background-primary: #202124;\r\n$background-secondary: #27272A;\r\n$color-primary: #FFFFFF;\r\n$color-secondary: #A1A1AA;\r\n$border-color: #414144;"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/widgets/table/Table.style.scss","webpack://./src/assets/styles/_variables.scss"],"names":[],"mappings":"AAEA;EACE,iBAAA;EACA,oBAAA;EACA,yBAAA;EACA,mBAAA;AADF;;AAIA;EACE,sBAAA;EACA,mBAAA;EACA,cCTgB;EDUhB,eAAA;EAEA,gBAAA;AAFF;AAIE;EAIE,gBAAA;AALJ;AAQE;EACE,WAAA;AANJ;;AAUA;EACE,kBAAA;EACA,gCAAA;AAPF;;AAUA;EACE,sBAAA;AAPF;AASE;EACE,sBAAA;AAPJ","sourcesContent":["@use '@styles/variables' as variables;\r\n\r\n.table {\r\n  margin-left: 1rem;\r\n  margin-right: .9rem;\r\n  border-collapse: collapse;\r\n  table-layout: fixed;\r\n}\r\n\r\n.table-header {\r\n  box-sizing: border-box;\r\n  font-weight: normal;\r\n  color: variables.$color-secondary;\r\n  padding: 1.2rem;\r\n\r\n  text-align: left;\r\n\r\n  &:nth-of-type(3),\r\n  &:nth-of-type(4),\r\n  &:nth-of-type(5),\r\n  &:nth-of-type(6) {\r\n    min-width: 20rem;\r\n  }\r\n\r\n  &:nth-of-type(2) {\r\n    width: 100%;\r\n  }\r\n}\r\n\r\n.table-row {\r\n  position: relative;\r\n  border-bottom: 1px solid variables.$border-color;\r\n}\r\n\r\n.table-cell {\r\n  padding: 2.1rem 1.2rem;\r\n\r\n  &:first-of-type {\r\n    padding: 2.2rem 1.6rem;\r\n  }\r\n}","$background-primary: #202124;\r\n$background-secondary: #27272A;\r\n$color-primary: #FFFFFF;\r\n$color-secondary: #A1A1AA;\r\n$border-color: #414144;"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"table": `wrWHPpEF7Pu50LMTXGJ2`,
@@ -32590,7 +32590,7 @@ const newWork = {
     materials: 0,
     mimExploitation: 0,
     overheads: 0,
-    rowName: "",
+    rowName: '',
     salary: 0,
     supportCosts: 0,
     total: 0
@@ -32802,12 +32802,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const ID = '141684';
 const BASE_URL = 'http://185.244.172.108:8081/';
-// export const ENDPOINTS = {
-//     getRowList: `/v1/outlay-rows/entity/${ID}/row/list`,
-//     createRow: `/v1/outlay-rows/entity/${ID}/row/create`,
-//     updateRow: `/v1/outlay-rows/entity/${ID}/row/{rID}/update`,
-//     deleteRow: `/v1/outlay-rows/entity/${ID}/row/{rID}/delete`,
-// }
 const ENDPOINTS = {
     row: `v1/outlay-rows/entity/${ID}/row`,
 };
@@ -32908,14 +32902,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var _navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./navbar */ "./src/widgets/content/navbar/index.ts");
-/* harmony import */ var _Content_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Content.style.scss */ "./src/widgets/content/Content.style.scss");
-/* harmony import */ var _table__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../table */ "./src/widgets/table/index.ts");
+/* harmony import */ var _table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../table */ "./src/widgets/table/index.ts");
+/* harmony import */ var _Content_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Content.style.scss */ "./src/widgets/content/Content.style.scss");
 
 
 
 
 function Content() {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", { className: _Content_style_scss__WEBPACK_IMPORTED_MODULE_2__["default"].content, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_navbar__WEBPACK_IMPORTED_MODULE_1__.Navbar, {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: _Content_style_scss__WEBPACK_IMPORTED_MODULE_2__["default"].workspace, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_table__WEBPACK_IMPORTED_MODULE_3__.Table, {}) })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", { className: _Content_style_scss__WEBPACK_IMPORTED_MODULE_3__["default"].content, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_navbar__WEBPACK_IMPORTED_MODULE_1__.Navbar, {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: _Content_style_scss__WEBPACK_IMPORTED_MODULE_3__["default"].workspace, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_table__WEBPACK_IMPORTED_MODULE_2__.Table, {}) })] }));
 }
 
 
@@ -32949,8 +32943,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 /* harmony import */ var src_shared__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/shared */ "./src/shared/index.ts");
-/* harmony import */ var _Navbar_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Navbar.style.scss */ "./src/widgets/content/navbar/Navbar.style.scss");
-/* harmony import */ var _icons_nav_item_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @icons/nav-item.svg */ "./src/assets/icons/nav-item.svg");
+/* harmony import */ var _icons_nav_item_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @icons/nav-item.svg */ "./src/assets/icons/nav-item.svg");
+/* harmony import */ var _Navbar_style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Navbar.style.scss */ "./src/widgets/content/navbar/Navbar.style.scss");
 
 
 
@@ -32973,11 +32967,11 @@ const navItems = [
     'Контрагенты',
 ];
 function NavItem({ selected, children }) {
-    const className = (0,src_shared__WEBPACK_IMPORTED_MODULE_1__.applyStyles)([_Navbar_style_scss__WEBPACK_IMPORTED_MODULE_2__["default"].navItem, selected ? _Navbar_style_scss__WEBPACK_IMPORTED_MODULE_2__["default"].navItemSelected : '']);
-    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", { className: className, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_nav_item_svg__WEBPACK_IMPORTED_MODULE_3__["default"], {}), children] });
+    const className = (0,src_shared__WEBPACK_IMPORTED_MODULE_1__.applyStyles)([_Navbar_style_scss__WEBPACK_IMPORTED_MODULE_3__["default"].navItem, selected ? _Navbar_style_scss__WEBPACK_IMPORTED_MODULE_3__["default"].navItemSelected : '']);
+    return (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", { className: className, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_nav_item_svg__WEBPACK_IMPORTED_MODULE_2__["default"], {}), children] });
 }
 function Navbar() {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("nav", { className: _Navbar_style_scss__WEBPACK_IMPORTED_MODULE_2__["default"].navbar, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("ul", { children: navItems.map((item, idx) => (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(NavItem, { selected: item === 'СМР', children: item }, idx)) }) }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("nav", { className: _Navbar_style_scss__WEBPACK_IMPORTED_MODULE_3__["default"].navbar, children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("ul", { children: navItems.map((item, idx) => (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(NavItem, { selected: item === 'СМР', children: item }, idx)) }) }));
 }
 
 
@@ -33010,11 +33004,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   Header: () => (/* binding */ Header)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-/* harmony import */ var _Header_style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header.style.scss */ "./src/widgets/header/Header.style.scss");
-/* harmony import */ var _icons_menu_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @icons/menu.svg */ "./src/assets/icons/menu.svg");
-/* harmony import */ var _icons_back_arrow_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @icons/back-arrow.svg */ "./src/assets/icons/back-arrow.svg");
-/* harmony import */ var src_shared__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/shared */ "./src/shared/index.ts");
-/* harmony import */ var _icons_dropdown_arrow_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @icons/dropdown-arrow.svg */ "./src/assets/icons/dropdown-arrow.svg");
+/* harmony import */ var _icons_menu_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @icons/menu.svg */ "./src/assets/icons/menu.svg");
+/* harmony import */ var _icons_back_arrow_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @icons/back-arrow.svg */ "./src/assets/icons/back-arrow.svg");
+/* harmony import */ var src_shared__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/shared */ "./src/shared/index.ts");
+/* harmony import */ var _icons_dropdown_arrow_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @icons/dropdown-arrow.svg */ "./src/assets/icons/dropdown-arrow.svg");
+/* harmony import */ var _Header_style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Header.style.scss */ "./src/widgets/header/Header.style.scss");
 
 
 
@@ -33022,7 +33016,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Header() {
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("header", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_1__["default"].header, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("nav", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_1__["default"].controls, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_menu_svg__WEBPACK_IMPORTED_MODULE_2__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_back_arrow_svg__WEBPACK_IMPORTED_MODULE_3__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: (0,src_shared__WEBPACK_IMPORTED_MODULE_4__.applyStyles)([_Header_style_scss__WEBPACK_IMPORTED_MODULE_1__["default"].mode, _Header_style_scss__WEBPACK_IMPORTED_MODULE_1__["default"].modeSelected]), children: "\u041F\u0440\u043E\u0441\u043C\u043E\u0442\u0440" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_1__["default"].mode, children: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435" })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_1__["default"].dropdown, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_1__["default"].project, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u0430" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_1__["default"].projectAbbreviation, children: "\u0410\u0431\u0431\u0440\u0435\u0432\u0438\u0430\u0442\u0443\u0440\u0430" })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_dropdown_arrow_svg__WEBPACK_IMPORTED_MODULE_5__["default"], {})] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_1__["default"].title, children: "\u0421\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C\u043D\u043E-\u043C\u043E\u043D\u0442\u0430\u0436\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B" })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("header", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_5__["default"].header, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("nav", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_5__["default"].controls, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_menu_svg__WEBPACK_IMPORTED_MODULE_1__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_back_arrow_svg__WEBPACK_IMPORTED_MODULE_2__["default"], {}), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: (0,src_shared__WEBPACK_IMPORTED_MODULE_3__.applyStyles)([_Header_style_scss__WEBPACK_IMPORTED_MODULE_5__["default"].mode, _Header_style_scss__WEBPACK_IMPORTED_MODULE_5__["default"].modeSelected]), children: "\u041F\u0440\u043E\u0441\u043C\u043E\u0442\u0440" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_5__["default"].mode, children: "\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435" })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_5__["default"].dropdown, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_5__["default"].project, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { children: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u043F\u0440\u043E\u0435\u043A\u0442\u0430" }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("p", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_5__["default"].projectAbbreviation, children: "\u0410\u0431\u0431\u0440\u0435\u0432\u0438\u0430\u0442\u0443\u0440\u0430" })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_dropdown_arrow_svg__WEBPACK_IMPORTED_MODULE_4__["default"], {})] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("h1", { className: _Header_style_scss__WEBPACK_IMPORTED_MODULE_5__["default"].title, children: "\u0421\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C\u043D\u043E-\u043C\u043E\u043D\u0442\u0430\u0436\u043D\u044B\u0435 \u0440\u0430\u0431\u043E\u0442\u044B" })] }));
 }
 
 
@@ -33087,8 +33081,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_shared__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/shared */ "./src/shared/index.ts");
 /* harmony import */ var src_shared_hooks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/shared/hooks */ "./src/shared/hooks.ts");
 /* harmony import */ var _Table_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Table.service */ "./src/widgets/table/Table.service.ts");
-/* harmony import */ var _Table_style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Table.style.scss */ "./src/widgets/table/Table.style.scss");
-/* harmony import */ var _table_row_TableRow__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./table-row/TableRow */ "./src/widgets/table/table-row/TableRow.tsx");
+/* harmony import */ var _table_row__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./table-row */ "./src/widgets/table/table-row/index.ts");
+/* harmony import */ var _Table_style_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Table.style.scss */ "./src/widgets/table/Table.style.scss");
 
 
 
@@ -33118,13 +33112,9 @@ function Table() {
         if (isFirstRender) {
             dispatch((0,src_entities_works_operations__WEBPACK_IMPORTED_MODULE_2__.pullWorks)());
         }
-        console.log(map);
-        console.log(order);
     }, [map, order]);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useLayoutEffect)(() => {
-        console.log(iconsRef.current);
         for (const id in iconsRef.current) {
-            console.log(id);
             const childRef = iconsRef.current[id];
             const parentId = map[id]._addInfo.parent;
             if (!parentId) {
@@ -33140,10 +33130,7 @@ function Table() {
             setBounds(prev => (Object.assign(Object.assign({}, prev), { [id]: { width: calculatedWidth, height: calculatedHeight } })));
         }
     }, [map, order]);
-    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-        console.log(bounds);
-    }, [bounds]);
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("table", { className: _Table_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].table, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("thead", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("tr", { className: _Table_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].tableRow, children: headers.map((header) => (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", { className: _Table_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].tableHeader, children: header }, header)) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("tbody", { children: order.map((workId) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_table_row_TableRow__WEBPACK_IMPORTED_MODULE_8__.TableRow, { work: map[workId], refCallback: ((0,_Table_service__WEBPACK_IMPORTED_MODULE_6__.collectRef)(iconsRef, workId)), bound: bounds[workId] }, workId))) })] }));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("table", { className: _Table_style_scss__WEBPACK_IMPORTED_MODULE_8__["default"].table, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("thead", { children: (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("tr", { className: _Table_style_scss__WEBPACK_IMPORTED_MODULE_8__["default"].tableRow, children: headers.map((header) => (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("th", { className: _Table_style_scss__WEBPACK_IMPORTED_MODULE_8__["default"].tableHeader, children: header }, header)) }) }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("tbody", { children: order.map((workId) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_table_row__WEBPACK_IMPORTED_MODULE_7__.TableRow, { work: map[workId], refCallback: ((0,_Table_service__WEBPACK_IMPORTED_MODULE_6__.collectRef)(iconsRef, workId)), bound: bounds[workId] }, workId))) })] }));
 }
 
 
@@ -33180,11 +33167,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _icons_doc_icon_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @icons/doc-icon.svg */ "./src/assets/icons/doc-icon.svg");
 /* harmony import */ var _icons_delete_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @icons/delete.svg */ "./src/assets/icons/delete.svg");
-/* harmony import */ var _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./TableRow.style.scss */ "./src/widgets/table/table-row/TableRow.style.scss");
-/* harmony import */ var src_shared__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/shared */ "./src/shared/index.ts");
-/* harmony import */ var src_entities_works__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/entities/works */ "./src/entities/works/index.ts");
-/* harmony import */ var src_entities_works_operations__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/entities/works/operations */ "./src/entities/works/operations.ts");
+/* harmony import */ var src_shared__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/shared */ "./src/shared/index.ts");
+/* harmony import */ var src_entities_works__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/entities/works */ "./src/entities/works/index.ts");
+/* harmony import */ var src_entities_works_operations__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! src/entities/works/operations */ "./src/entities/works/operations.ts");
 /* harmony import */ var react_number_format__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-number-format */ "./node_modules/react-number-format/dist/react-number-format.es.js");
+/* harmony import */ var _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./TableRow.style.scss */ "./src/widgets/table/table-row/TableRow.style.scss");
 
 
 
@@ -33205,7 +33192,7 @@ function TableRow({ work, refCallback, bound }) {
     var _a;
     const [state, setState] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(Object.assign(Object.assign({}, work), { isRaw: (_a = work._addInfo.isNew) !== null && _a !== void 0 ? _a : false }));
     const [controlsVisible, setControlsVisible] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
-    const dispatch = (0,src_shared__WEBPACK_IMPORTED_MODULE_5__.useAppDispatch)();
+    const dispatch = (0,src_shared__WEBPACK_IMPORTED_MODULE_4__.useAppDispatch)();
     const [textType, ...numberType] = interactingWorkProps;
     const createRequest = {
         equipmentCosts: state.equipmentCosts,
@@ -33227,17 +33214,17 @@ function TableRow({ work, refCallback, bound }) {
             return;
         }
         if (work._addInfo.isNew) {
-            dispatch((0,src_entities_works_operations__WEBPACK_IMPORTED_MODULE_7__.createWork)(Object.assign(Object.assign({ id: work.id }, createRequest), { parentId: state._addInfo.parent }))).then(() => setState((prev) => (Object.assign(Object.assign({}, prev), { isRaw: false }))));
+            dispatch((0,src_entities_works_operations__WEBPACK_IMPORTED_MODULE_6__.createWork)(Object.assign(Object.assign({ id: work.id }, createRequest), { parentId: state._addInfo.parent }))).then(() => setState((prev) => (Object.assign(Object.assign({}, prev), { isRaw: false }))));
         }
         else {
-            dispatch((0,src_entities_works_operations__WEBPACK_IMPORTED_MODULE_7__.updateWork)(Object.assign({ id: work.id }, createRequest))).then(() => setState((prev) => (Object.assign(Object.assign({}, prev), { isRaw: false }))));
+            dispatch((0,src_entities_works_operations__WEBPACK_IMPORTED_MODULE_6__.updateWork)(Object.assign({ id: work.id }, createRequest))).then(() => setState((prev) => (Object.assign(Object.assign({}, prev), { isRaw: false }))));
         }
     };
     const handleCreateClick = () => {
         if (state.isRaw) {
             return;
         }
-        dispatch(src_entities_works__WEBPACK_IMPORTED_MODULE_6__.actions.createNewWork({ parentId: work.id }));
+        dispatch(src_entities_works__WEBPACK_IMPORTED_MODULE_5__.actions.createNewWork({ parentId: work.id }));
     };
     const mouseEnterHandler = () => {
         if (state.isRaw) {
@@ -33246,9 +33233,25 @@ function TableRow({ work, refCallback, bound }) {
         setControlsVisible(true);
     };
     const mouseLeaveHandler = () => setControlsVisible(false);
-    const handleRemoveWork = () => dispatch((0,src_entities_works_operations__WEBPACK_IMPORTED_MODULE_7__.removeWork)(work.id));
-    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", { className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_4__["default"].tableRow, onDoubleClick: () => setState((prev) => (Object.assign(Object.assign({}, prev), { isRaw: true }))), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", { className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_4__["default"].tableCell, style: { paddingLeft: `${1.6 + work._addInfo.depth * 2}rem` }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: (0,src_shared__WEBPACK_IMPORTED_MODULE_5__.applyStyles)([_TableRow_style_scss__WEBPACK_IMPORTED_MODULE_4__["default"].controls, controlsVisible ? _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_4__["default"].controlsVisible : '']), onMouseLeave: mouseLeaveHandler, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_doc_icon_svg__WEBPACK_IMPORTED_MODULE_2__["default"], { ref: refCallback, onClick: handleCreateClick, onMouseEnter: mouseEnterHandler }), controlsVisible && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_delete_svg__WEBPACK_IMPORTED_MODULE_3__["default"], { onClick: handleRemoveWork })] }), bound && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_4__["default"].bound, style: Object.assign(Object.assign({}, bound), { transform: `translate3d(${-bound.width + 6}px,${-bound.height - 14}px, 0)` }) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_4__["default"].tableCell, children: state.isRaw ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", { onChange: createChangeHandler(textType), onKeyDown: handleSubmit, value: state[textType], className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_4__["default"].input }) : work[textType] }), numberType.map((workProp) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_4__["default"].tableCell, children: state.isRaw ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_number_format__WEBPACK_IMPORTED_MODULE_8__.NumericFormat, { decimalScale: 0, allowNegative: true, onChange: createChangeHandler(workProp), onKeyDown: handleSubmit, value: state[workProp], className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_4__["default"].input }) : work[workProp] }, workProp)))] }, work.id));
+    const handleRemoveWork = () => dispatch((0,src_entities_works_operations__WEBPACK_IMPORTED_MODULE_6__.removeWork)(work.id));
+    return ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("tr", { className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].tableRow, onDoubleClick: () => setState((prev) => (Object.assign(Object.assign({}, prev), { isRaw: true }))), children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("td", { className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].tableCell, style: { paddingLeft: `${1.6 + work._addInfo.depth * 2}rem` }, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", { className: (0,src_shared__WEBPACK_IMPORTED_MODULE_4__.applyStyles)([_TableRow_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].controls, controlsVisible ? _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].controlsVisible : '']), onMouseLeave: mouseLeaveHandler, children: [(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_doc_icon_svg__WEBPACK_IMPORTED_MODULE_2__["default"], { ref: refCallback, onClick: handleCreateClick, onMouseEnter: mouseEnterHandler }), controlsVisible && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(_icons_delete_svg__WEBPACK_IMPORTED_MODULE_3__["default"], { onClick: handleRemoveWork })] }), bound && (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("div", { className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].bound, style: Object.assign(Object.assign({}, bound), { transform: `translate3d(${-bound.width + 6}px,${-bound.height - 14}px, 0)` }) })] }), (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].tableCell, children: state.isRaw ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("input", { onChange: createChangeHandler(textType), onKeyDown: handleSubmit, value: state[textType], className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].input }) : work[textType] }), numberType.map((workProp) => ((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)("td", { className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].tableCell, children: state.isRaw ? (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_number_format__WEBPACK_IMPORTED_MODULE_8__.NumericFormat, { decimalScale: 0, allowNegative: true, onChange: createChangeHandler(workProp), onKeyDown: handleSubmit, value: state[workProp], className: _TableRow_style_scss__WEBPACK_IMPORTED_MODULE_7__["default"].input }) : work[workProp] }, workProp)))] }, work.id));
 }
+
+
+/***/ }),
+
+/***/ "./src/widgets/table/table-row/index.ts":
+/*!**********************************************!*\
+  !*** ./src/widgets/table/table-row/index.ts ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   TableRow: () => (/* reexport safe */ _TableRow__WEBPACK_IMPORTED_MODULE_0__.TableRow)
+/* harmony export */ });
+/* harmony import */ var _TableRow__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TableRow */ "./src/widgets/table/table-row/TableRow.tsx");
+
 
 
 /***/ }),
@@ -39146,4 +39149,4 @@ root.render((0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(react_redux__
 
 /******/ })()
 ;
-//# sourceMappingURL=main.b705b980.js.map
+//# sourceMappingURL=main.01b0c709.js.map
