@@ -1,6 +1,6 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit"
-import { createWork, pullWorks, removeWork, updateWork } from "./operations"
-import { RowResponse, RowResponseWithAddInfo, } from "./types"
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createWork, pullWorks, removeWork, updateWork } from './operations'
+import { RowResponse, RowResponseWithAddInfo, } from './types'
 
 type State = {
   worksMap: { [workId: string]: RowResponseWithAddInfo }
@@ -20,7 +20,7 @@ const newWork: Omit<RowResponse, 'id'> = {
   materials: 0,
   mimExploitation: 0,
   overheads: 0,
-  rowName: "",
+  rowName: '',
   salary: 0,
   supportCosts: 0,
   total: 0

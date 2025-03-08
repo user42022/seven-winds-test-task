@@ -1,5 +1,5 @@
-import { api } from "src/shared"
-import { OutlayRowRequest, OutlayRowUpdateRequest, RecalculatedRows, TreeResponse } from "./types"
+import { api } from 'src/shared'
+import { OutlayRowRequest, OutlayRowUpdateRequest, RecalculatedRows, TreeResponse } from './types'
 
 export const getWorksRequest = async (): Promise<TreeResponse[]> => {
   const res = await fetch(`${api.BASE_URL}/${api.ENDPOINTS.row}/list`)

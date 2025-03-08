@@ -2,12 +2,11 @@ import { OutlayRowUpdateRequest, RowResponse, RowResponseWithAddInfo } from 'src
 import { ChangeEventHandler, KeyboardEventHandler, useState } from 'react'
 import DocumentIcon from '@icons/doc-icon.svg'
 import DeleteIcon from '@icons/delete.svg'
-
-import styles from './TableRow.style.scss'
 import { applyStyles, useAppDispatch } from 'src/shared'
 import { actions } from 'src/entities/works'
-import { createWork, removeWork, updateWork } from "src/entities/works/operations"
+import { createWork, removeWork, updateWork } from 'src/entities/works/operations'
 import { NumericFormat } from 'react-number-format'
+import styles from './TableRow.style.scss'
 
 const interactingWorkProps: (keyof RowResponse)[] = [
   'rowName',

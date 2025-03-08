@@ -1,7 +1,7 @@
-import { createAsyncThunk } from "@reduxjs/toolkit"
-import { createWorkRequest, getWorksRequest, removeWorkRequest, updateWorkRequest } from "./api"
-import { flatResponseTree } from "./service"
-import { OutlayRowRequest, OutlayRowUpdateRequest, RecalculatedRows } from "./types"
+import { createAsyncThunk } from '@reduxjs/toolkit'
+import { createWorkRequest, getWorksRequest, removeWorkRequest, updateWorkRequest } from './api'
+import { flatResponseTree } from './service'
+import { OutlayRowRequest, OutlayRowUpdateRequest, RecalculatedRows } from './types'
 
 type Works = ReturnType<typeof flatResponseTree>
 

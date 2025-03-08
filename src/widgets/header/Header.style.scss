@@ -9,8 +9,8 @@
   gap: 1px 1px;
   grid-auto-flow: row dense;
   grid-template-areas:
-    "controls controls controls"
-    ". . .";
+    'controls controls controls'
+    '. . .';
 
     &>* {
       background-color: variables.$background-primary;

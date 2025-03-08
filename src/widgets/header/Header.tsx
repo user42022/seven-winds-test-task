@@ -1,8 +1,8 @@
-import styles from './Header.style.scss'
 import MenuIcon from '@icons/menu.svg'
 import BackArrow from '@icons/back-arrow.svg'
 import { applyStyles } from 'src/shared'
 import DropdownIcon from '@icons/dropdown-arrow.svg'
+import styles from './Header.style.scss'
 
 export function Header() {
 

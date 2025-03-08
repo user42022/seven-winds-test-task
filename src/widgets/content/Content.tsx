@@ -1,6 +1,6 @@
-import { Navbar } from "./navbar"
+import { Navbar } from './navbar'
+import { Table } from '../table'
 import styles from './Content.style.scss'
-import { Table } from "../table"
 
 export function Content() {
 

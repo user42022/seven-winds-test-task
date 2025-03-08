@@ -1,4 +1,4 @@
-import { RowResponseWithAddInfo, TreeResponse } from "./types"
+import { RowResponseWithAddInfo, TreeResponse } from './types'
 
 const addDepthAndParent = (node: TreeResponse, depth: number, parent: string | null) => ({ ...node, _addInfo: { depth, parent } })
 

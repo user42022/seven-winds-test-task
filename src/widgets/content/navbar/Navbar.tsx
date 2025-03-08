@@ -1,7 +1,7 @@
 import { applyStyles } from 'src/shared'
-import styles from './Navbar.style.scss'
 import NavItemIcon from '@icons/nav-item.svg'
 import { ReactNode } from 'react'
+import styles from './Navbar.style.scss'
 
 const navItems = [
   'По проекту',
